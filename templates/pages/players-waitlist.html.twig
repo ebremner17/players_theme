@@ -1,0 +1,13 @@
+<h2>{{ games.display_date }}</h2>
+
+{% if games.games %}
+  {% for game in games.games %}
+    <h3>{{ game.title }}: {{ game.start_time }} - {{ game.end_time }}</h3>
+  {% endfor %}
+
+  <a href="waitlist/add/{{ games.date }}">
+    <button class="players-button players-button--blue">Add your name to wait list</button>
+  </a>
+{% else %}
+  There are currently no games scheduled, please check back later.
+{% endif %}

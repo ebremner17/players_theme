@@ -1,0 +1,15 @@
+name: Players
+type: theme
+description: Theme for Player's Inc
+base theme: bartik
+core_version_requirement: ^8 || ^9
+
+libraries:
+  - core/normalize
+  - players_theme/global-styling
+
+regions:
+  header: Header
+  highlighted: Highlighted
+  content: Content
+  footer: Footer
