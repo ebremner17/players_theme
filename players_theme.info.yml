@@ -1,8 +1,8 @@
 name: Players
 type: theme
 description: Theme for Player's Inc
-base theme: bartik
-core_version_requirement: ^8 || ^9
+base theme: olivero
+core_version_requirement: ^9
 
 libraries:
   - core/normalize
@@ -10,6 +10,15 @@ libraries:
 
 regions:
   header: Header
+  primary_menu: 'Primary menu'
+  secondary_menu: 'Secondary menu'
+  hero: 'Hero (full width)'
   highlighted: Highlighted
+  breadcrumb: Breadcrumb
+  social: Social Bar
+  content_above: Content Above
   content: Content
-  footer: Footer
+  sidebar: 'Sidebar'
+  content_below: 'Content Below'
+  footer_top: 'Footer Top'
+  footer_bottom: 'Footer Bottom'
