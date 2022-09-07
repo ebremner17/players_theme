@@ -1,0 +1,44 @@
+.players-reserve {
+  .players-content {
+    padding: 1rem 0;
+  }
+
+  table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+  }
+  th,
+  td {
+    border: 1px solid black;
+    text-align: left;
+    padding: 0 0.5rem;
+  }
+
+  input.form-element--type-text {
+    max-width: 20rem;
+  }
+}
+
+.reserve-content {
+  padding: 1rem 0;
+}
+
+.reserve-no-list {
+  background-color: #eee;
+  padding: 0.5rem;
+}
+
+.players-floor-date {
+  .form-item-date {
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+  }
+
+  .form-actions {
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+  }
+}
