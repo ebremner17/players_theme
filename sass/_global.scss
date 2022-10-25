@@ -42,3 +42,9 @@ details > summary {
 details > summary::-webkit-details-marker {
   display: none;
 }
+
+.user-authenticated {
+  #toolbar-item-user-tray {
+    display: none;
+  }
+}
