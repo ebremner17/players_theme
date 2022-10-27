@@ -1,0 +1,21 @@
+.players-footer {
+  background-color: black;
+  color: white;
+
+  &__wrapper {
+    max-width: 78rem;
+    margin-right: auto;
+    margin-left: auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-column-gap: 1rem;
+  }
+
+  &__contact {
+    grid-column: 1 / 2;
+  }
+
+  &__content {
+    grid-column: 2 / 3;
+  }
+}
