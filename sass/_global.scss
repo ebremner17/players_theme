@@ -56,3 +56,43 @@ details > summary::-webkit-details-marker {
 .region--highlighted {
   padding-top: 1rem;
 }
+
+#block-players-theme-content {
+  display: block;
+  width: 100%;
+}
+
+.grid-full {
+  display: block;
+}
+
+.main-content {
+  width: 100%;
+}
+
+.players-contained-width {
+  max-width: 73rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.region--highlighted,
+#entity-view-display-layout-builder-form {
+  max-width: 78rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.layout-builder {
+  padding: 1.5em 0 0.5em;
+}
+
+.layout-builder__section:has(.players-contained-width) {
+  max-width: 78rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.layout-builder__link {
+  margin-left: 0.25rem;
+}
