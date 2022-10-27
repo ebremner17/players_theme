@@ -21,9 +21,8 @@ function players_theme_preprocess_html(&$variables) {
   // If there is only 1 role and that first role is authenticated, remove the manage link.
   // If there are multiple roles then we know that they will have the Manage link, we are
   // only removing the manage link for strictly authenticated users only.
-  if (count($roles) == 1 && $roles[0] == 'authenticated') {
-    // Adding the faculty colour class to the body.
-    $variables['attributes']['class'][] = 'user-authenticated';
+  foreach ($roles as $role) {
+    $variables['attributes']['class'][] = 'user-' . $role;
   }
 }
 
