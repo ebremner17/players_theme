@@ -1,3 +1,7 @@
+body {
+  background-image: none;
+}
+
 details {
   padding: .5em .5em 0;
 }
@@ -47,4 +51,8 @@ details > summary::-webkit-details-marker {
   #toolbar-item-user-tray {
     display: none;
   }
+}
+
+.region--highlighted {
+  padding-top: 1rem;
 }
