@@ -1,0 +1,14 @@
+{%
+  set classes = [
+  'layout',
+  'layout--players-2-col',
+  settings.column_class,
+]
+%}
+
+{% set num_of_blocks = 2 %}
+
+{% include directory ~ '/templates/layouts/layout--players.html.twig' with {
+  classes: classes,
+  num_of_blocks: num_of_blocks,
+} %}

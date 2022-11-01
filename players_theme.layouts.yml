@@ -1,0 +1,152 @@
+players_1_column:
+  label: 'One column'
+  category: 'Players layouts'
+  template: layouts/layout--players-1-col
+  default_region: first
+  regions:
+    first:
+      label: One
+  icon_map:
+    - [first]
+players_2_column:
+  label: 'Two columns'
+  category: 'Players layouts'
+  class: '\Drupal\players_cfg\Plugin\Layout\PlayersColumnLayoutBase'
+  template: layouts/layout--players-2-col
+  default_region: first
+  regions:
+    first:
+      label: First
+    second:
+      label: Second
+  icon_map:
+    - [first, second]
+  column_options:
+    columns:
+      even-split: 'Even split (50%, 50%)'
+      larger-left: 'Larger left (67%, 33%)'
+      larger-right: 'Larger right (33%, 67%)'
+    default: 'even-split'
+players_3_column:
+  label: 'Three columns'
+  category: 'Players layouts'
+  class: '\Drupal\players_cfg\Plugin\Layout\PlayersColumnLayoutBase'
+  template: layouts/layout--players-3-col
+  default_region: first
+  regions:
+    first:
+      label: First
+    second:
+      label: Second
+    third:
+      label: Third
+  icon_map:
+    - [first, second, third]
+  column_options:
+    columns:
+      even-split: 'Even split (33%, 34%, 33%)'
+      larger-left: 'Larger left (50%, 25%, 25%)'
+      larger-middle: 'Larger middle (25%, 50%, 25%)'
+      larger-right: 'Larger right (25%, 25%, 50%)'
+    default: 'even-split'
+players_4_column:
+  label: 'Four columns'
+  category: 'Players layouts'
+  class: '\Drupal\players_cfg\Plugin\Layout\PlayersColumnLayoutBase'
+  template: layouts/layout--players-4-col
+  default_region: first
+  regions:
+    first:
+      label: First
+    second:
+      label: Second
+    third:
+      label: Third
+    fourth:
+      label: Fourth
+  icon_map:
+    - [first, second, third, fourth]
+  column_options:
+    columns:
+      even-split: 'Even split (25%, 25%, 25%, 25%)'
+      larger-left: 'Larger left (50%, 16.67%, 16.67%, 16.67%)'
+      larger-second: 'Larger second (16.67%, 50%, 16.67%, 16.67%)'
+      larger-third: 'Larger third (16.67%, 16.67%, 50%, 16.67%)'
+      larger-right: 'Larger right (16.67%, 16.67%, 16.67%, 50%)'
+    default: 'even-split'
+players_5_column:
+  label: 'Five columns'
+  category: 'Players layouts'
+  class: '\Drupal\players_cfg\Plugin\Layout\PlayersColumnLayoutBase'
+  template: layouts/layout--players-5-col
+  default_region: first
+  regions:
+    first:
+      label: First
+    second:
+      label: Second
+    third:
+      label: Third
+    fourth:
+      label: Fourth
+    fifth:
+      label: Fifth
+  icon_map:
+    - [first, second, third, fourth, fifth]
+  column_options:
+    columns:
+      even-split: 'Even split (20%, 20%, 20%, 20%, 20%)'
+      larger-left: 'Larger left (40%, 15%, 15%, 15%, 15%)'
+      larger-second: 'Larger second (15%, 40%, 15%, 15%, 15%)'
+      larger-third: 'Larger third (15%, 15%, 40%, 15%, 15%)'
+      larger-fourth: 'Larger fourth (15%, 15%, 15%, 40%, 15%)'
+      larger-right: 'Larger right (15%, 15%, 15%, 15%, 40%)'
+    default: 'even-split'
+players_inverted_l_right:
+  label: 'Inverted "L" - right'
+  category: 'UW layouts'
+  class: '\Drupal\players_cfg\Plugin\Layout\PlayersColumnLayoutBase'
+  template: layouts/layout--players-inverted-l-right
+  default_region: first
+  regions:
+    first:
+      label: First
+    second:
+      label: Second
+    third:
+      label: Third
+    fourth:
+      label: Fourth
+  icon_map:
+    - [first, second, fourth]
+    - [third, third, fourth]
+  column_options:
+    columns:
+      even-split: 'Even split (50%, 50%)'
+      larger-left: 'Larger left (67%, 33%)'
+      larger-right: 'Larger right (33%, 67%)'
+    default: 'even-split'
+players_inverted_l_left:
+  label: 'Inverted "L" - left'
+  category: 'Players layouts'
+  class: '\Drupal\players_cfg\Plugin\Layout\PlayersColumnLayoutBase'
+  template: layouts/layout--players-inverted-l-left
+  default_region: first
+  regions:
+    first:
+      label: First
+    second:
+      label: Second
+    third:
+      label: Third
+    fourth:
+      label: Fourth
+  icon_map:
+    - [first, second, third]
+    - [first, fourth, fourth]
+  column_options:
+    columns:
+      even-split: 'Even split (50%, 50%)'
+      larger-left: 'Larger left (67%, 33%)'
+      larger-right: 'Larger right (33%, 67%)'
+    default: 'even-split'

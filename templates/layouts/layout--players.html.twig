@@ -1,0 +1,53 @@
+{% set section_names = {
+  1: 'first',
+  2: 'second',
+  3: 'third',
+  4: 'fourth',
+  5: 'fifth',
+} %}
+
+{% set section_classes = '' %}
+
+<section {{ attributes.addClass(classes) }}>
+
+  {% for i in 1..num_of_blocks %}
+
+    {% set section_name = section_names[loop.index] %}
+
+    {% if inverted_l_left or inverted_l_right %}
+      {% if loop.index == 1 %}
+        <div class="players-inverted-l--left-side">
+      {% endif %}
+
+      {% if inverted_l_left and loop.index == 2 %}
+        <div class="players-inverted-l--right-side">
+      {% endif %}
+
+      {% if inverted_l_right and loop.index == 4 %}
+        <div class="players-inverted-l--right-side">
+      {% endif %}
+
+    {% endif %}
+
+    <div {{ region_attributes[section_name].addClass('layout__region', 'layout__region--' ~ section_name) }}>
+      {{ content[section_name] }}
+    </div>
+
+    {% if inverted_l_left or inverted_l_right %}
+      {% if inverted_l_left %}
+        {% if loop.index == 1 or loop.index == 4 %}
+          </div>
+        {% endif %}
+      {% endif %}
+
+      {% if inverted_l_right %}
+        {% if loop.index == 3 or loop.index == 4 %}
+          </div>
+        {% endif %}
+      {% endif %}
+
+    {% endif %}
+
+  {% endfor %}
+
+</section>

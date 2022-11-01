@@ -78,14 +78,19 @@ details > summary::-webkit-details-marker {
 }
 
 .region--highlighted,
-#entity-view-display-layout-builder-form {
-  max-width: 78rem;
+#entity-view-display-layout-builder-form,
+.node-players-web-page-layout-builder-form {
+  max-width: 63rem;
   margin-right: auto;
   margin-left: auto;
 }
 
 .layout-builder {
   padding: 1.5em 0 0.5em;
+}
+
+.layout-builder-block {
+  padding: 1.5rem 0;
 }
 
 .layout-builder__section:has(.players-contained-width) {

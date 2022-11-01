@@ -1,0 +1,459 @@
+.layout--players-1-col {
+  display: grid;
+  gap: 0;
+  grid-template-columns: 100%;
+}
+
+.layout--players-1-col .layout__region--first {
+  grid-column: 1 / 2;
+}
+
+.layout--players-2-col {
+  display: grid;
+  gap: 0;
+  grid-template-columns: 100%;
+
+  &.larger-left {
+    @media screen and (min-width: 768px) {
+      grid-template-columns: minmax(0, 2fr) 1fr;
+    }
+  }
+
+  &.larger-right {
+    @media screen and (min-width: 768px) {
+      grid-template-columns: 1fr minmax(0, 2fr);
+    }
+  }
+
+  &.even-split {
+    grid-template-columns: 100%;
+
+    @media screen and (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .layout__region{
+
+    &--first {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+    }
+
+    &--second {
+      grid-column: 1 / 2;
+      grid-row: 2/ 3;
+
+      @media screen and (min-width: 768px) {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+      }
+    }
+  }
+}
+
+.layout--players-3-col {
+  display: grid;
+  gap: 0;
+
+  &.even-split {
+    grid-template-columns: 100%;
+
+    @media screen and (min-width: 768px) {
+      grid-template-columns: minmax(0, 1fr)  minmax(0, 1fr)  minmax(0, 1fr);
+    }
+  }
+
+  &.larger-left {
+    grid-template-columns: 100%;
+
+    @media screen and (min-width: 768px) {
+      grid-template-columns: minmax(0, 2fr)  minmax(0, 1fr)  minmax(0, 1fr);
+    }
+  }
+
+  &.larger-middle {
+    grid-template-columns: 100%;
+
+    @media screen and (min-width: 768px) {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 2fr) minmax(0, 1fr);
+    }
+  }
+
+  &.larger-right {
+    grid-template-columns: 100%;
+
+    @media screen and (min-width: 768px) {
+      grid-template-columns: minmax(0, 1fr)  minmax(0, 1fr) minmax(0, 2fr);
+    }
+  }
+
+  .layout__region{
+
+    &--first {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+    }
+
+    &--second {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+
+      @media screen and (min-width: 768px) {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+      }
+    }
+
+    &--third {
+      grid-column: 1 / 2;
+      grid-row: 3 / 4;
+
+      @media screen and (min-width: 768px) {
+        grid-column: 3 / 4;
+        grid-row: 1 / 2;
+      }
+    }
+  }
+}
+
+.layout--players-4-col {
+  display: grid;
+  gap: 0;
+  grid-template-columns: 100%;
+
+  &.even-split {
+
+    @media screen and (min-width: 768px) {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    }
+
+    @media screen and (min-width: 768px) {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+    }
+  }
+
+  &.larger-left {
+
+    @media screen and (min-width: 768px) {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    }
+
+    @media screen and (min-width: 768px) {
+      grid-template-columns: minmax(0, 3fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+    }
+  }
+
+  &.larger-second {
+
+    @media screen and (min-width: 768px) {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    }
+
+    @media screen and (min-width: 768px) {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 3fr) minmax(0, 1fr) minmax(0, 1fr);
+    }
+  }
+
+  &.larger-third {
+
+    @media screen and (min-width: 768px) {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    }
+
+    @media screen and (min-width: 768px) {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 3fr) minmax(0, 1fr);
+    }
+  }
+
+  &.larger-right {
+
+    @media screen and (min-width: 768px) {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    }
+
+    @media screen and (min-width: 768px) {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 3fr);
+    }
+  }
+
+  .layout__region{
+
+    &--first {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+    }
+
+    &--second {
+      grid-column: 1 / 2;
+
+      @media screen and (min-width: 768px) {
+        grid-column: 2 / 3;
+      }
+
+      @media screen and (min-width: 768px) {
+        grid-column: 2 / 3;
+      }
+    }
+
+    &--third {
+
+      @media screen and (min-width: 768px) {
+        grid-column: 1 / 2;
+      }
+
+      @media screen and (min-width: 768px) {
+        grid-column: 3 / 4;
+        grid-row: 1 / 2;
+      }
+    }
+
+    &--fourth {
+
+      @media screen and (min-width: 768px) {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+      }
+
+      @media screen and (min-width: 768px) {
+        grid-column: 4 / 5;
+        grid-row: 1 / 2;
+      }
+    }
+  }
+}
+
+.layout--players-5-col {
+  display: grid;
+  gap: 0;
+  grid-template-columns: 100%;
+
+  &.even-split {
+    @media screen and (min-width: 768px) {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+    }
+  }
+
+  &.larger-left {
+    @media screen and (min-width: 768px) {
+      grid-template-columns: minmax(0, 3fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+    }
+  }
+
+  &.larger-second {
+    @media screen and (min-width: 768px) {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 3fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+    }
+  }
+
+  &.larger-third {
+    @media screen and (min-width: 768px) {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 3fr) minmax(0, 1fr) minmax(0, 1fr);
+    }
+  }
+
+  &.larger-fourth {
+    @media screen and (min-width: 768px) {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 3fr) minmax(0, 1fr);
+    }
+  }
+
+  &.larger-right {
+    @media screen and (min-width: 768px) {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 3fr);
+    }
+  }
+
+  .layout__region {
+
+    &--first {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+    }
+
+    &--second {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+
+      @media screen and (min-width: 768px) {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+      }
+    }
+
+    &--third {
+      grid-column: 1 / 2;
+      grid-row: 3 / 4;
+
+      @media screen and (min-width: 768px) {
+        grid-column: 3 / 4;
+        grid-row: 1 / 2;
+      }
+    }
+
+    &--fourth {
+      grid-column: 1 / 2;
+      grid-row: 4 / 5;
+
+      @media screen and (min-width: 768px) {
+        grid-column: 4 / 5;
+        grid-row: 1 / 2;
+      }
+    }
+
+    &--fifth {
+      grid-column: 1 / 2;
+      grid-row: 5 / 6;
+
+      @media screen and (min-width: 768px) {
+        grid-column: 5 / 6;
+        grid-row: 1 / 2;
+      }
+    }
+  }
+}
+
+.layout--players-inverted-l-left {
+  display: grid;
+  gap: 0;
+  grid-template-columns: 100%;
+
+  &.even-split {
+    @media screen and (min-width: 768px) {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    }
+  }
+
+  &.larger-left {
+    @media screen and (min-width: 768px) {
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    }
+  }
+
+  &.larger-right {
+    @media screen and (min-width: 768px) {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    }
+  }
+
+  .players-inverted-l--left-side {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  .players-inverted-l--right-side {
+    display: grid;
+    gap: 0;
+    grid-column: 1 / 2;
+    grid-template-columns: 100%;
+
+    @media screen and (min-width: 768px) {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    }
+
+    @media screen and (min-width: 768px) {
+      grid-column: 2 / 3;
+    }
+  }
+
+  .layout__region {
+
+    &--second {
+      @media screen and (min-width: 768px) {
+        grid-column: 1 / 2;
+      }
+    }
+
+    &--third {
+      grid-column: 1 / 2;
+
+      @media screen and (min-width: 768px) {
+        grid-column: 2 / 3;
+      }
+    }
+
+    &--fourth {
+      grid-column: 1 / 2;
+
+      @media screen and (min-width: 768px) {
+        grid-column: 1 / 3;
+      }
+    }
+  }
+}
+
+.layout--players-inverted-l-right {
+  display: grid;
+  gap: 0;
+  grid-template-columns: 100%;
+
+  &.even-split {
+    @media screen and (min-width: 768px) {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    }
+  }
+
+  &.larger-left {
+    @media screen and (min-width: 768px) {
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    }
+  }
+
+  &.larger-right {
+    @media screen and (min-width: 768px) {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    }
+  }
+
+  .players-inverted-l--left-side {
+    display: grid;
+    gap: 0;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    grid-template-columns: 100%;
+
+    @media screen and (min-width: 768px) {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    }
+  }
+
+  .players-inverted-l--right-side {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+
+    @media screen and (min-width: 768px) {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+    }
+  }
+
+  .layout__region {
+
+    &--first {
+      grid-column: 1 / 2;
+
+      @media screen and (min-width: 768px) {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+      }
+    }
+
+    &--second {
+      grid-column: 1 / 2;
+
+      @media screen and (min-width: 768px) {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+      }
+    }
+
+    &--third {
+      grid-column: 1 / 2;
+
+      @media screen and (min-width: 768px) {
+        grid-column: 1 / 3;
+        grid-row: 2 / 3;
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+players_theme.x-small:
+  label: x-small
+  mediaQuery: 'all and (min-width: 15em)'
+players_theme.small:
+  label: small
+  mediaQuery: 'all and (min-width: 25em)'
+players_theme.medium:
+  label: medium
+  mediaQuery: 'all and (min-width: 30em)'
+players_theme.large:
+  label: large
+  mediaQuery: 'all and (min-width: 49.81em)'
+players_theme.x-large:
+  label: x-large
+  mediaQuery: 'all and (min-width: 63.19em)'
