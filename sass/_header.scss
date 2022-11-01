@@ -1,6 +1,7 @@
 #page {
   display: grid;
-  grid-template-rows: 100%;
+  // This is what is causing the big white space
+  //grid-template-rows: 100%;
 }
 
 .players-header {
@@ -9,7 +10,6 @@
 
   .section {
     display: grid;
-    grid-template-columns: 100%;
   }
 
   &__logo {

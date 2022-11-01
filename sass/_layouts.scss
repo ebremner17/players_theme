@@ -1,17 +1,16 @@
 .layout--players-1-col {
   display: grid;
   gap: 0;
-  grid-template-columns: 100%;
-}
-
-.layout--players-1-col .layout__region--first {
-  grid-column: 1 / 2;
+  .layout__region{
+   &--first {
+     grid-column: 1 / 2;
+   }
+  }
 }
 
 .layout--players-2-col {
   display: grid;
   gap: 0;
-  grid-template-columns: 100%;
 
   &.larger-left {
     @media screen and (min-width: 768px) {
@@ -57,7 +56,6 @@
   gap: 0;
 
   &.even-split {
-    grid-template-columns: 100%;
 
     @media screen and (min-width: 768px) {
       grid-template-columns: minmax(0, 1fr)  minmax(0, 1fr)  minmax(0, 1fr);
@@ -73,7 +71,6 @@
   }
 
   &.larger-middle {
-    grid-template-columns: 100%;
 
     @media screen and (min-width: 768px) {
       grid-template-columns: minmax(0, 1fr) minmax(0, 2fr) minmax(0, 1fr);
@@ -81,7 +78,6 @@
   }
 
   &.larger-right {
-    grid-template-columns: 100%;
 
     @media screen and (min-width: 768px) {
       grid-template-columns: minmax(0, 1fr)  minmax(0, 1fr) minmax(0, 2fr);
@@ -120,7 +116,6 @@
 .layout--players-4-col {
   display: grid;
   gap: 0;
-  grid-template-columns: 100%;
 
   &.even-split {
 
@@ -226,7 +221,6 @@
 .layout--players-5-col {
   display: grid;
   gap: 0;
-  grid-template-columns: 100%;
 
   &.even-split {
     @media screen and (min-width: 768px) {
@@ -316,7 +310,6 @@
 .layout--players-inverted-l-left {
   display: grid;
   gap: 0;
-  grid-template-columns: 100%;
 
   &.even-split {
     @media screen and (min-width: 768px) {
@@ -345,7 +338,6 @@
     display: grid;
     gap: 0;
     grid-column: 1 / 2;
-    grid-template-columns: 100%;
 
     @media screen and (min-width: 768px) {
       grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
@@ -385,7 +377,6 @@
 .layout--players-inverted-l-right {
   display: grid;
   gap: 0;
-  grid-template-columns: 100%;
 
   &.even-split {
     @media screen and (min-width: 768px) {
@@ -410,7 +401,6 @@
     gap: 0;
     grid-column: 1 / 2;
     grid-row: 1 / 2;
-    grid-template-columns: 100%;
 
     @media screen and (min-width: 768px) {
       grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
