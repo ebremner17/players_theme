@@ -91,6 +91,10 @@ details > summary::-webkit-details-marker {
 
 .layout-builder-block {
   padding: 1.5rem 0;
+  &.block-cbl-copy-text,
+  &.block-cbl-copy-text{
+    padding: 0;
+  }
 }
 
 .layout-builder__section:has(.players-contained-width) {
@@ -98,7 +102,9 @@ details > summary::-webkit-details-marker {
   margin-right: auto;
   margin-left: auto;
 }
-
+.layout-builder__add-section{
+  margin-top: 6rem;
+}
 .layout-builder__link {
   margin-left: 0.25rem;
 }

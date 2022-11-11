@@ -1,9 +1,22 @@
+
 .block-cbl-copy-text{
   height: 100%;
   .block__content{
     height: 100%;
     .players-copy-text{
       height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
   }
+}
+
+.block-inline-blockcbl-image{
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+  height: 100%;
 }
