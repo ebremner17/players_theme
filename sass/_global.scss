@@ -86,14 +86,20 @@ details > summary::-webkit-details-marker {
 }
 
 .layout-builder {
-  padding: 1.5em 0 0.5em;
+  //padding: 1.5em 0 0.5em;
 }
 
 .layout-builder-block {
   padding: 1.5rem 0;
   &.block-cbl-copy-text,
-  &.block-cbl-copy-text{
-    padding: 0;
+  &.block-inline-blockcbl-image{
+    padding: 0 !important;
+    + .layout-builder__add-block{
+      position: absolute;
+      margin: 0 auto;
+      max-width: 20rem;
+      width: 100%;
+    }
   }
 }
 
@@ -102,6 +108,7 @@ details > summary::-webkit-details-marker {
   margin-right: auto;
   margin-left: auto;
 }
+
 .layout-builder__add-section{
   margin-top: 6rem;
 }
