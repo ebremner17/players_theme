@@ -1,0 +1,15 @@
+Game type: {{ content.field_game_type | field_value }}
+<br />
+Game time: {{ content.field_start_time | field_value }} {{ content.field_start_time_am_pm | field_value }} - {{ content.field_end_time | field_value }} {{ content.field_end_time_am_pm | field_value }}
+
+{% set notes = content.field_game_notes | field_value %}
+
+{% if notes %}
+  <div class="players-game-notes__wrapper">
+    Notes:
+    <div class="players-game-notes">
+      {{ notes }}
+    </div>
+  </div>
+{% endif %}
+<br />
