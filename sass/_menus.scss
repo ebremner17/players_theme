@@ -1,0 +1,17 @@
+.responsive-menus {
+  .primary-nav__menu-link {
+    font-size: 1rem;
+  }
+
+  .contextual {
+    display: none;
+  }
+}
+
+#block-players-theme-account-menu {
+  padding-left: 1rem;
+
+  @media screen and (min-width: 768px) {
+    padding-left: 2.25rem;
+  }
+}

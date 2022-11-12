@@ -1,9 +1,3 @@
-#page {
-  display: grid;
-  // This is what is causing the big white space
-  //grid-template-rows: 100%;
-}
-
 .players-header {
   grid-row: 1 / 2;
   background-color: white;

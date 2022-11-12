@@ -3,17 +3,22 @@
   color: white;
 
   &__wrapper {
-    max-width: 78rem;
     margin-right: auto;
     margin-left: auto;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-column-gap: 1rem;
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+      max-width: 78rem;
+      display: grid;
+      grid-template-columns: 50% 50%;
+    }
   }
 
   &__hours {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
+    @media screen and (min-width: 768px) {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+    }
 
     span {
       font-weight: bold;
