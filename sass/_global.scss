@@ -129,3 +129,12 @@ details > summary::-webkit-details-marker {
 .block-local-tasks-block {
   padding-top: 1rem;
 }
+
+.messages-list {
+  padding-top: 0.5rem;
+}
+
+body.toolbar-tray-open.toolbar-vertical.toolbar-fixed {
+  margin-left: 0;
+  margin-right: 0;
+}
