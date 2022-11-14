@@ -1,6 +1,5 @@
 .players-header {
   grid-row: 1 / 2;
-  background-color: white;
 
   .section {
     display: grid;
@@ -15,8 +14,6 @@
   }
 
   &__content {
-    background-color: #666A26;
-    color: white;
     grid-column: 1 / 2;
     grid-row: 2 / 3;
     padding-top: 1rem;
