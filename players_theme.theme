@@ -37,12 +37,16 @@ function players_theme_preprocess_region(&$variables) {
 
     $config = \Drupal::config('players_heading.settings');
 
-    $variables['header_text']['text'] = [
-      '#type' => 'processed_text',
-      '#text' => $config->get('header_text')['value'],
-      '#format' => $config->get('header_text')['format'],
-    ];
+    $header_settings = $config->get('header_text');
 
-    $variables['header_text']['bg_color'] = $config->get('bg_color');
+    if ($header_settings) {
+      $variables['header_text']['text'] = [
+        '#type' => 'processed_text',
+        '#text' => $config->get('header_text')['value'],
+        '#format' => $config->get('header_text')['format'],
+      ];
+
+      $variables['header_text']['bg_color'] = $config->get('bg_color');
+    }
   }
 }
