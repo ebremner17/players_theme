@@ -59,9 +59,16 @@
 }
 
 .players-reserve-block {
+  h2 {
+    text-decoration: underline;
+  }
   h2,
-  h3 {
+  h3,
+  h4 {
     margin: 0;
+  }
+  h4 {
+    font-weight: normal;
   }
   text-align: center;
 }
