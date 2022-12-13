@@ -24,6 +24,10 @@ function players_theme_preprocess_html(&$variables) {
   foreach ($roles as $role) {
     $variables['attributes']['class'][] = 'user-' . $role;
   }
+
+  if ($current_user->isAuthenticated()) {
+    $variables['attributes']['class'][] = 'is-logged-in';
+  }
 }
 
 /**
