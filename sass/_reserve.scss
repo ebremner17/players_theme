@@ -1,4 +1,13 @@
 .players-reserve {
+  h3,
+  h4 {
+    margin: 0;
+  }
+
+  h4 {
+    font-weight: normal;
+  }
+
   .players-content {
     padding: 1rem 0;
   }
@@ -51,6 +60,23 @@
   text-align: center;
 }
 
+<<<<<<< HEAD
 .user-register-message {
   max-width: 36.5rem;
+=======
+.players-checkmark {
+  display: inline-block;
+  transform: rotate(45deg);
+  height: 18px;
+  width: 10px;
+  border-bottom: 4px solid #78b13f;
+  border-right: 4px solid #78b13f;
+  margin-right: 0.5rem;
+}
+
+.players-x {
+  font-size: 18px;
+  font-weight: bold;
+  color: red;
+>>>>>>> origin/tourney-edit-reserve
 }
