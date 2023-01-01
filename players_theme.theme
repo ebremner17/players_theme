@@ -28,6 +28,18 @@ function players_theme_preprocess_html(&$variables) {
   if ($current_user->isAuthenticated()) {
     $variables['attributes']['class'][] = 'is-logged-in';
   }
+
+  $config = \Drupal::config('players_site.settings');
+
+  $operating_hours = $config->get('operating_hours');
+
+  if ($operating_hours) {
+    $variables['page']['operating_hours'] = [
+      '#type' => 'processed_text',
+      '#text' => $config->get('operating_hours')['value'],
+      '#format' => $config->get('operating_hours')['format'],
+    ];
+  }
 }
 
 /**
@@ -39,7 +51,7 @@ function players_theme_preprocess_region(&$variables) {
     $themeHandler = \Drupal::service('theme_handler');
     $variables['theme_path'] = $themeHandler->getTheme($themeHandler->getDefault())->getPath();
 
-    $config = \Drupal::config('players_heading.settings');
+    $config = \Drupal::config('players_site.settings');
 
     $header_settings = $config->get('header_text');
 
@@ -53,4 +65,5 @@ function players_theme_preprocess_region(&$variables) {
       $variables['header_text']['bg_color'] = $config->get('bg_color');
     }
   }
+
 }

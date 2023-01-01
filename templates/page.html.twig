@@ -91,7 +91,9 @@
       </div>
     {% endif %}
     <footer class="players-footer">
-      {% include 'region--footer.html.twig' %}
+      {% include 'region--footer.html.twig' with {
+        'operating_hours': page.operating_hours
+      } %}
     </footer>
   </div>
 </div>
