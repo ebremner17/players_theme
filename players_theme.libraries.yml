@@ -3,3 +3,8 @@ global-styling:
   css:
     theme:
       css/styles.css: {}
+admin-extra:
+  version: 1.x
+  css:
+    theme:
+      css/admin_styles.css: {}
