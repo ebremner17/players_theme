@@ -19,17 +19,51 @@
     padding-top: 1rem;
     text-align: center;
   }
+
+  &__reserve {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    padding-top: 1rem;
+    text-align: center;
+    background-color: white;
+  }
+}
+
+.players-header__reserve {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+
+  @media screen and (min-width: 768px) {
+    padding: 0;
+  }
+
+  .players-reserves {
+    border: 3px solid green;
+    padding: 1rem;
+  }
 }
 
 @media screen and (min-width: 768px) {
   .players-header {
     .section {
-      grid-template-columns: 200px auto;
+      grid-template-columns: 200px auto 300px;
+    }
+
+    &__logo {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
     }
 
     &__content {
       padding: 1rem;
       grid-column: 2 / 3;
+      grid-row: 1 / 2;
+    }
+
+    &__reserve {
+      grid-column: 3 / 4;
       grid-row: 1 / 2;
     }
   }
@@ -60,7 +94,7 @@
 
 .players-menu {
   grid-column: 1 / 2;
-  grid-row: 3 / 4;
+  grid-row: 4 / 5;
   background-color: black;
   color: white;
 

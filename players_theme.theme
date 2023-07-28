@@ -64,6 +64,38 @@ function players_theme_preprocess_region(&$variables) {
 
       $variables['header_text']['bg_color'] = $config->get('bg_color');
     }
+
+    // Get the corrected date.
+    $date = \Drupal::service('players_reserve.players_service')->getCorrectDate();
+
+    $url_date = date('Y-m-d');
+
+    $node = current(\Drupal::service('entity_type.manager')
+      ->getStorage('node')
+      ->loadByProperties(['title' => $url_date]));
+
+    $games = $node->field_game_types->getValue()[0]['target_id'];
+
+    $paragraph = \Drupal::service('entity_type.manager')
+      ->getStorage('paragraph')
+      ->load($games);
+
+    $game_type = $paragraph->field_game_type->getValue()[0]['value'];
+
+    // Get the start time and am/pm.
+    $start_time = $paragraph->field_start_time->getValue()[0]['value'];
+    $start_time_am_pm = $paragraph->field_start_time_am_pm->getValue()[0]['value'];
+
+    // Get the start time and the current time to compare.
+    $start_time = date('G', strtotime($start_time . $start_time_am_pm)) - 1;
+    $current_time = date('G');
+
+    $variables['reserves'] = \Drupal::service('players_reserve.players_service')
+      ->getCurrentReserveStats(
+        $node,
+        $game_type,
+        $start_time <= $current_time
+      );
   }
 
 }
