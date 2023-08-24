@@ -51,7 +51,7 @@ function players_theme_preprocess_region(&$variables) {
     $themeHandler = \Drupal::service('theme_handler');
     $variables['theme_path'] = $themeHandler->getTheme($themeHandler->getDefault())->getPath();
 
-    $config = \Drupal::config('players_site.settings');
+    $config = \Drupal::config('players_cfg.site_settings');
 
     $header_settings = $config->get('header_text');
 
