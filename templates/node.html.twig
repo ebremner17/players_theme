@@ -82,6 +82,35 @@
 ]
 %}
 <article{{ attributes.addClass(classes) }}>
+  {% if marketing_items %}
+    <div class="players-marketing-items">
+      {% for item in marketing_items %}
+        {% if item.url %}
+          <a href="{{ item.url }}">
+        {% endif %}
+        <div class="players-marekting-item">
+          {% if item.image %}
+            <div class="players-marekting-item__image">
+              {{ item.image }}
+            </div>
+          {% endif %}
+          {% if item.image %}
+            <div class="players-marekting-item__heading">
+              {{ item.heading }}
+            </div>
+          {% endif %}
+          {% if item.text %}
+            <div class="players-marekting-item__text">
+              {{ item.text }}
+            </div>
+          {% endif %}
+        </div>
+        {% if item.url %}
+          </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  {% endif %}
   {% if header_text %}
     <div class="players-header-text"{% if header_text.bg_color %} style="background-color: {{ header_text.bg_color }}"{% endif %}>
       <div class="players-header-text__text players-contained-width">
