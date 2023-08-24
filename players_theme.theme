@@ -29,7 +29,7 @@ function players_theme_preprocess_html(&$variables) {
     $variables['attributes']['class'][] = 'is-logged-in';
   }
 
-  $config = \Drupal::config('players_site.settings');
+  $config = \Drupal::config('players_cfg.site_settings');
 
   $operating_hours = $config->get('operating_hours');
 
