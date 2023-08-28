@@ -113,7 +113,8 @@
       {% endfor %}
     </div>
   {% endif %}
-  {% if header_text %}
+  {% if header_text and header_text.text['#text'] != '' %}
+    {{ dd(header_text) }}
     <div class="players-header-text"{% if header_text.bg_color %} style="background-color: {{ header_text.bg_color }}"{% endif %}>
       <div class="players-header-text__text players-contained-width">
         {{ header_text.text }}
