@@ -88,22 +88,24 @@
         {% if item.url %}
           <a href="{{ item.url }}">
         {% endif %}
-        <div class="players-marekting-item">
+        <div class="players-marketing-item" style="--accent-color: {{item.color}}">
+        <div class="players-marketing-item__bg"></div>
           {% if item.image %}
-            <div class="players-marekting-item__image">
+            <div class="players-marketing-item__image">
               {{ item.image }}
             </div>
           {% endif %}
-          {% if item.image %}
-            <div class="players-marekting-item__heading">
-              {{ item.heading }}
+          {% if item.heading %}
+            <div class="players-marketing-item__heading">
+              <h2>{{ item.heading }}</h2>
             </div>
           {% endif %}
           {% if item.text %}
-            <div class="players-marekting-item__text">
+            <div class="players-marketing-item__text">
               {{ item.text }}
             </div>
           {% endif %}
+          <div class="players-marketing-item__line"></div>
         </div>
         {% if item.url %}
           </a>

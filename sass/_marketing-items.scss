@@ -1,0 +1,157 @@
+:where(html) {
+  --accent-color: #444444;
+}
+.players-marketing-items {
+  //display: grid;
+  //grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+  text-align: center;
+  padding: 1rem;
+  a {
+    text-decoration: none;
+    &:hover,
+    &:focus {
+     * {
+       text-decoration: none;
+     }
+    }
+  }
+  h2,h3,h4,h5,h6 {
+    padding: 0;
+    line-height: 1.25;
+    margin: 0 0 0.5rem 0;
+  }
+  h2 {
+    font-size:1.25rem;
+  }
+  h3 {
+    font-size:1rem;
+  }
+  h3,h4,h5,h6 {
+    font-size: 0.85rem;
+  }
+  p,
+  strong {
+    font-size: 0.875rem;
+    line-height: 1.25;
+    margin: 0 0 0.5rem 0;
+  }
+}
+.players-marketing-item {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 0 100%;
+  border: 2px solid white;
+  padding: 2rem 0.5rem;
+  box-shadow: 0 0 10px #00000029;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  @media screen and (min-width: 600px) {
+    flex: 1 0 45%;
+  }
+  @media screen and (min-width: 1220px) {
+    padding: 2rem;
+    flex: 1 0 28%;
+  }
+  @media screen and (min-width: 1600px) {
+    padding: 1rem;
+    flex: 1 0 20%;
+  }
+  //@todo remove strong use class
+  .marketing_bad_beat,
+    strong {
+      background-color: var(--accent-color);
+      color: #fff;
+      padding: 1rem;
+      display: inline-block;
+    }
+  &:hover,
+  &:focus {
+    .players-marketing-item__bg {
+      transform: scale(12);
+
+      top: 0;
+      right: 0;
+      cursor: pointer;
+      transition: all .5s ease;
+    }
+    .players-marketing-item__line {
+      background-color:white !important;
+      transform: scale(1.125);
+      transition: all .5s ease;
+    }
+    .marketing_bad_beat,
+    strong {
+      color: var(--accent-color) !important;
+      background-color: #fff;
+    }
+    * {
+      color: white !important;
+    }
+    a {
+      &:hover,
+      &:focus{
+        text-decoration: none;
+      }
+    }
+    .players-marketing-item__image {
+      img {
+        transform: scale(1.5);
+        transition: all .5s ease;
+      }
+    }
+  }
+  &__bg {
+    height: 145px;
+    width: 145px;
+    background-color: var(--accent-color);
+    z-index: 0;
+    position: absolute;
+    top: -80px;
+    right: -80px;
+    border-radius: 50%;
+    transition: all .5s ease;
+  }
+  &__line {
+    height:0.25rem;
+    width: 3rem;
+    background-color: var(--accent-color);
+    position: absolute;
+    bottom: 1rem;
+    transition: all .5s ease;
+  }
+  &__image {
+    position: relative;
+    z-index: 1;
+    img{
+      display:inline-block;
+      max-width:100px;
+      width:100%;
+      transition: all .5s ease;
+    }
+  }
+  &__heading {
+    position: relative;
+    z-index: 1;
+    h2{
+      color:var(--accent-color);
+    }
+  }
+  &__text {
+    position: relative;
+    z-index: 1;
+    a {
+      color:var(--accent-color);
+      &:hover,
+      &:focus {
+      color: var(--accent-color);
+      }
+    }
+  }
+}
