@@ -94,7 +94,6 @@
 
   p {
     line-height: 1.25rem;
-    font-size: 1.15rem;
   }
 
   a {
@@ -160,10 +159,9 @@
     color: var(--info-color);
     z-index: 10;
     text-shadow: rgb(0, 0, 0) 1px 1px 2px;
-    font-size: 1.25rem;
     margin: 0 0.5rem;
+
     @media screen and (min-width: 768px) {
-      font-size: 2rem;
       padding: 0;
     }
   }
