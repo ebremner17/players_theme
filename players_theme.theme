@@ -72,7 +72,11 @@ function players_theme_preprocess_region(&$variables) {
       ->getStorage('node')
       ->loadByProperties(['title' => $date]));
 
-    $games = $node->field_game_types->getValue()[0]['target_id'];
+    if (!$node) {
+      return;
+    }
+
+    $games = $node->field_game_types->getValue()[0]['target_id'] ?? NULL;
 
     $paragraph = \Drupal::service('entity_type.manager')
       ->getStorage('paragraph')
