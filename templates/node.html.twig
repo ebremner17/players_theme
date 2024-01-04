@@ -82,48 +82,6 @@
 ]
 %}
 <article{{ attributes.addClass(classes) }}>
-  {% if club_info %}
-    <div class="players-club-info" style="--info-color: {{club_info.color}}">
-      {% if club_info.image %}
-
-        <style>
-          {% for source in club_info.image.sources|reverse %}
-            @media only screen and {{ source.media | replace({'all and': ''}) }} {
-              .players-club-info__image {
-                background-image: url("{{ source.srcset | replace({ ' 1x': '' }) }}");
-              }
-            }
-          {% endfor %}
-        </style>
-
-      {% endif %}
-      <div class="players-club-info__image">
-        <div class="players-club-info__text">
-          {{ club_info.text }}
-        </div>
-      </div>
-
-    </div>
-  {% endif %}
-  {% if marketing_items %}
-    <div class="players-marketing-items">
-      {% for item in marketing_items %}
-        <div class="players-marketing-item" style="--accent-color: {{item.color}}">
-          <img class="players-marketing-item__image" src="{{ item.image }}" alt="">
-          <div class="players-marketing-item__bk"></div>
-          <div class="players-marketing-item__icon">
-            <img src="{{ item.icon }}" alt="">
-          </div>
-          <div class="players-marketing-item__heading">
-            {{ item.heading }}
-          </div>
-          <div class="players-marketing-item__text">
-            {{ item.text }}
-          </div>
-        </div>
-      {% endfor %}
-    </div>
-  {% endif %}
   <header class="{{ layout }}">
     {{ title_prefix }}
     {% if label and not page %}
