@@ -8,3 +8,15 @@ admin-extra:
   css:
     theme:
       css/admin_styles.css: {}
+owl:
+  version: 1.x
+  css:
+    theme:
+      css/owl.carousel.min.css: {}
+      css/owl.theme.default.min.css: {}
+  js:
+    js/owl.carousel.min.js: {}
+    js/games-owl.js: {}
+  dependencies:
+    - core/jquery
+

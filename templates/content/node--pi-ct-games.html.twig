@@ -1,5 +1,13 @@
 <div class="players-contained-width">
-  <strong>Game Date:</strong> {{ content.field_game_date }}
-  <strong>Games:</strong><br />
-  {{ content.field_game_types }}
+  {% include '@players_theme/templates/content/game.html.twig' with {
+    'game_day': game_info.game_day,
+    'open_time': game_info.open_time,
+    'games': game_info.games,
+    'info': game_info.info,
+    'food': game_info.food,
+    'floor': game_info.floor,
+    'dealers': game_info.dealers,
+    'date': game_info.date,
+    'current': game_info.current
+  } %}
 </div>

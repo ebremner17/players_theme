@@ -1,12 +1,11 @@
-<div class="players-header__logo">
-  <img src="/{{ theme_path }}/images/logo.png" />
-</div>
+<header class="players-header" role="banner">
+  <div class="section layout-container clearfix">
+    <div class="players-header__logo">
+      <img src="/{{ theme_path }}/images/logo.png" />
+    </div>
 
-<div class="players-header__content"{% if header_text.bg_color %} style="background-color: {{ header_text.bg_color }}{% endif %}">
-  {% if header_text.text %}
-    {{ header_text.text }}
-  {% else %}
-    ALWAYS PLAYERS ALWAYS A GAME <br />
-    647-549-2036 OPEN EVERYDAY
-  {% endif %}
-</div>
+    <div class="players-header__menu">
+      {{ primary_menu }}
+    </div>
+  </div>
+</header>

@@ -1,0 +1,66 @@
+
+<div class="item">
+  <div class="players-game{% if current %} players-game__current{% endif %}">
+    <div class="players-game__header">
+      <div class="players-game__date">
+        <div class="players-game__calendar">
+          <img src="/themes/custom/players_theme/images/icons/calendar.png" >
+        </div>
+        <div class="players-game__day">
+          {{ game_day }}
+        </div>
+      </div>
+      <div class="players-game__open-time">
+        <div class="players-game__clock">
+          <img src="/themes/custom/players_theme/images/icons/clock.png" >
+        </div>
+        <div class="players-game__time">
+          {{ open_time }}
+        </div>
+      </div>
+    </div>
+    <div class="players-game__content">
+      {% if type == 'tournament' %}
+        <div class="players-game__content--date">
+          {{ game_date }}
+        </div>
+      {% endif %}
+      <div class="players-game__content--games">
+        {% for game in games %}
+          <strong>{{ game.game_type }}</strong>
+        {% endfor %}
+      </div>
+      {% if info %}
+        <div class="players-game__content--info">
+          {{ info }}
+        </div>
+      {% endif %}
+      {% if food %}
+        <div class="players-game__content--food">
+          <u>Food</u>
+          {{ food }}
+        </div>
+      {% endif %}
+      {% if floor or dealers %}
+        <div class="players-game__content--staff">
+          <u>Staff</u><br />
+          {% if floor %}
+            <div class="players-game__content--floor">
+              Floor: {{ floor }}
+            </div>
+          {% endif %}
+          {% if dealers %}
+            <div class="players-game__content--dealers">
+              Dealers: {{ dealers }}
+            </div>
+          {% endif %}
+        </div>
+      {% endif %}
+      <div class="players-game__reserve">
+        <a href="/reserve/{{ date }}">
+          <button class="players-button players-button--blue">Reserve</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
