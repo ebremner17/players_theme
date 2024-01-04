@@ -115,7 +115,12 @@
   }
 
   .owl-carousel .owl-stage {
-    display: flex;
+    @media screen and (min-width: 768px) {
+      max-width: inherit;
+      display: flex;
+      gap: 2rem;
+      padding: 2.5rem 0;
+    }
   }
 
   .item,
@@ -127,4 +132,10 @@
     margin: 0 5px;
   }
 
+}
+.players-games-block {
+  .owl-carousel .owl-stage {
+    gap: 1rem;
+    padding:0;
+  }
 }

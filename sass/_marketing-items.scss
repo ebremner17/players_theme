@@ -25,8 +25,11 @@
     margin-right: auto;
     margin-left: auto;
     max-width: 400px;
+    .owl-stage-outer & {
+      width: auto;
+      max-width: inherit;
+    }
   }
-
   @media screen and (min-width: 1220px) {
     padding: 2rem;
     flex: 1 0 28%;
