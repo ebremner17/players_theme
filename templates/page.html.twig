@@ -53,7 +53,8 @@
 <div id="page-wrapper">
   <div id="page">
     {% include '@players_theme/templates/regions/region--header.html.twig' with {
-      'primary_menu': page.primary_menu
+      'primary_menu': page.primary_menu,
+      'secondary_menu': page.secondary_menu
     } %}
     {% if page.highlighted %}
       <div class="highlighted">
