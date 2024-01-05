@@ -41,21 +41,6 @@
           {{ food }}
         </div>
       {% endif %}
-      {% if floor or dealers %}
-        <div class="players-game__content--staff">
-          <u>Staff</u><br />
-          {% if floor %}
-            <div class="players-game__content--floor">
-              Floor: {{ floor }}
-            </div>
-          {% endif %}
-          {% if dealers %}
-            <div class="players-game__content--dealers">
-              Dealers: {{ dealers }}
-            </div>
-          {% endif %}
-        </div>
-      {% endif %}
       <div class="players-game__reserve">
         <a href="/reserve/add/{{ date }}">
           <button class="players-button players-button--blue">Reserve</button>
