@@ -27,7 +27,14 @@
       {% endif %}
       <div class="players-game__content--games">
         {% for game in games %}
-          <strong>{{ game.game_type }}</strong>
+          {% if loop.index > 1 %}
+            <br />
+          {% endif %}
+          {% if game.game_type %}
+            <strong>{{ game.game_type }}</strong>
+          {% else %}
+            <strong>{{ game }}</strong>
+          {% endif %}
         {% endfor %}
       </div>
       {% if info %}
