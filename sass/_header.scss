@@ -12,9 +12,6 @@
     grid-row: 1 / 2;
     margin-left: auto;
     margin-right: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 1rem;
   }
 
@@ -35,12 +32,16 @@
       margin-bottom: 0;
     }
   }
+
+  &__phone {
+    text-align: center;
+  }
 }
 
 @media screen and (min-width: 768px) {
   .players-header {
     .section {
-      grid-template-columns: 200px auto;
+      grid-template-columns: 250px auto;
     }
 
     &__logo {
