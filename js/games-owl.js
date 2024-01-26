@@ -3,7 +3,7 @@
     attach: function (context, settings) {
       $(document).ready(function(){
 
-        $('.block-cbl-games-block .owl-carousel').owlCarousel({
+        $('.owl-carousel').owlCarousel({
           loop: false,
           nav: true,
           rewind: true,
