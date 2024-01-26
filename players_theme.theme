@@ -69,6 +69,14 @@ function players_theme_preprocess_page(&$variables) {
   // Get the theme path and set a variable.
   $themeHandler = \Drupal::service('theme_handler');
   $variables['theme_path'] = $themeHandler->getTheme($themeHandler->getDefault())->getPath();
+
+  // Add variable for logged in users.
+  if (\Drupal::currentUser()->isAuthenticated()) {
+    $variables['logged_in'] = TRUE;
+  }
+  else {
+    $variables['logged_in'] = FALSE;
+  }
 }
 
 /**

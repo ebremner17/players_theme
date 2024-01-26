@@ -10,6 +10,13 @@
     Scarborough, ON<br />
     647-549-2036
   </div>
+  <div class="players-footer__login">
+    {% if logged_in %}
+      <a href="/user/logout">Logout</a>
+    {% else %}
+      <a href="/user">Login</a>
+    {% endif %}
+  </div>
   <div class="players-footer__copyright">
     Copyright © {{ 'now' | date('Y') }} PLAYER'S INC. /toronto aces poker club
   </div>
