@@ -19,4 +19,12 @@ owl:
     js/games-owl.js: {}
   dependencies:
     - core/jquery
-
+flickity:
+  version: 1.x
+  css:
+    theme:
+      flickity/flickity.min.css: {}
+      flickity/flickity-gallery.css: {}
+  js:
+    flickity/flickity.pkgd.min.js: {}
+    flickity/flickity-gallery.js: {}

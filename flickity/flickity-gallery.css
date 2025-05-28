@@ -1,0 +1,35 @@
+* { box-sizing: border-box; }
+
+body { font-family: sans-serif; }
+
+.carousel {
+  background: #222;
+}
+.gallery {
+  width: 100%;
+}
+.carousel-cell {
+  width: 100%;
+  /* center images in cells with flexbox */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel.is-fullscreen .carousel-cell {
+  height: 100%;
+}
+
+.carousel-cell-image {
+  display: block;
+  max-height: 100%;
+}
+
+.carousel.is-fullscreen .carousel-cell-image {
+  max-width: 100%;
+}
+
+.media--type-video {
+  margin-left: auto;
+  margin-right: auto;
+}

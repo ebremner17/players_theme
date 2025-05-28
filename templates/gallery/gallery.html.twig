@@ -1,0 +1,11 @@
+{{ attach_library('players_theme/flickity') }}
+
+<div class="gallery">
+  <div class="carousel" data-flickity='{ "fullscreen": true, "adaptiveHeight": true, "autoPlay": true, "pauseAutoPlayOnHover": true, "wrapAround": true, "pageDots": true, "prevNextButtons": true }'>
+    {% for media_item in media_items %}
+      <div class="carousel-cell">
+        {{ media_item }}
+      </div>
+    {% endfor %}
+  </div>
+</div>
